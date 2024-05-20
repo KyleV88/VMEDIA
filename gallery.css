@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: border-box;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(4, 195, 253, 0.7), #86cefe), url(media/background2.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10%;
+    border-bottom: 1px solid #000;
+    z-index: 10;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 15px 70px;
+    font-weight: 500;
+    cursor: pointer;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+}
+nav .logo{
+    width: 100px;
+    cursor: pointer;
+}
+
+.nav-btn{
+    background: #000;
+    color: #fff;
+    padding: 10px 15px;
+    border: 0;
+    outline: 0;
+    border-radius: 40px;
+    cursor: pointer;   
+}
+
+.nav-item{
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 20px;
+    border: 0;
+    outline: 0;
+    border-radius: 40px;
+    cursor: pointer; 
+}
+.header{
+    width: 100%;
+    min-height: 100vh;
+    background: transparent;
+    padding: 0 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btn-container{
+    margin: 20px 0;
+}
+.header button{
+    border: 0;
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
+    margin-right: 20px;
+    cursor: pointer;
+
+}
+.container h1{
+    padding: 60px 0;
+    color: #000000;
+    font-size: 44px;
+    text-align: center;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.col{
+    flex-basis: 50%;
+    min-width: 250px;
+}
+.feature-img{
+    width: 83%;
+    margin: auto;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.small-img-row{
+    display: flex;
+    background: transparent;
+    margin: 20px 0;
+    align-items: center;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 85%;
+}
+.small-img{
+    position: relative;
+}
+.small-img img{
+    width: 150px;
+}
+.small-img-row p{
+    margin-left: 20px;
+    color: #000000;
+    line-height: 22px;
+    font-size: 15px;
+}
+.play-btn{
+    width: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.small-img .play-btn{
+    width: 35px;
+} 
+.video-player{
+    width: 65%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -40%);
+    display: none;
+} 
+video:focus{
+    outline: none;
+} 
+.close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    cursor: pointer;
+} 
+
+/* ---------- animation ------- */
+
+.menu-icon{
+    display: none;
+}
+/* ---------- Media Queries for navbar ------ */
+
+@media only screen and (max-width: 800px){
+    nav ul{
+        position: absolute;
+        width: 100%;
+        background: #fff;
+        left: 0;
+        top: 100%;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-heigt 0.5s;
+    }
+    .nav-btn{
+        display: none;
+    }
+    nav .logo{
+        width: 150px;
+    }
+    nav ul li{
+        margin: 10px;
+        font-size: 14px;
+    }
+    .menu-icon{
+        display: block;
+        width: 30px;
+    }
+    .show-menu{
+        max-height: 60px;
+    }
+.small-img-row{
+    display: flex;
+    background:none;
+    margin: 20px 0;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 200%;
+}
+.small-img{
+    position: relative;
+}
+.small-img{
+    width: 150px;
+}
+.small-img-row p{
+    text-align: left;   
+}
+.feature-img{
+    position: relative;
+}
+.feature-img{
+    width: 250px;
+}
+}
+

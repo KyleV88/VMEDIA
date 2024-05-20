@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="viewport" content="width=device-width, initial-scale=1">
+    <title>V MEDIA</title>
+    <link rel="stylesheet" href="services.css">
+<script src="https://kit.fontawesome.com/cbd1996782.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+        <nav>
+            <img src="images/logo3.png" alt="" class="logo">
+            <ul id="menu-links">
+                <li><a href="home.html">Home</li></a>
+                <li><a href="services.html">Services</li></a>
+                <li><a href="gallery.html">Gallery</li></a>
+                <li><a href="about.html">About us</li></a>
+            </ul>
+            <a href="get_started.html"><button class="nav-btn">Get started<img src="images/arrow-white.png"></button></a>
+            
+            <img src="images/menu.png" alt="" class="menu-icon" onclick="toogleMenu()">
+        </nav>
+    </head>
+    <body>
+        <section class="about">
+        <div class="header">
+            <img src="images/background1.png" class="background-img">
+            <div class="about-text">
+                <h5><span>Services</span></h5>
+            <h5>Web Developing<span> and Design </span></h5>
+            <h5>VFX and<span> Motion Graphic Design </span></h5>
+            <h5>Videography and<span> Video Editing </span></h5>
+            <h5>Generative<span> AI </span></h5>
+            <p>At VMEDIA we deliver a professional service according to our customers needs. We are a Professional Visual and Multimedia Service provider that makes use of the latest technology, including Generative AI.<br>Your dreams can now become a reality.</p>         
+        </div>
+    </section>   
+
+           
+        </div>
+        
+    </div>
+    
+    <script>
+        let navbar = document.querySelector('nav');
+        let menuLinks = document.getElementById("menu-links")
+    
+        function toogleMenu(){
+            menuLinks.classList.toggle('show-menu');
+    
+        }
+        window.onscroll = function(){
+            if(window.scrollY > 0){
+                navbar.style.background = '#eeff9';
+            }else{
+                navbar.style.background = 'transparent';
+            }
+        }
+    
+    </script>
+    
+    </body>
+    </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="viewport" content="width=device-width, initial-scale=1">
+    <title>V MEDIA</title>
+    <link rel="stylesheet" href="get_started.css">
+<script src="https://kit.fontawesome.com/cbd1996782.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <img src="images/logo3.png" alt="" class="logo">
+        <ul id="menu-links">
+            <li><a href="home.html">Home</li></a>
+            <li><a href="services.html">Services</li></a>
+            <li><a href="gallery.html">Gallery</li></a>
+            <li><a href="about.html">About us</li></a>
+        </ul>   
+        <img src="images/menu.png" alt="" class="menu-icon" onclick="toogleMenu()">
+    </nav>
+
+<div class="hero">
+
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Get in touch</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="8163cced-e0c5-4650-ad00-f20389f7336c">
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+            <button type="submit">Submit<img src="images/arrow-white.png" alt=""></button>
+
+        </form>
+        <div class="contact-righht"></div>
+    </div>
+  
+
+<script>
+    let navbar = document.querySelector('nav');
+    let menuLinks = document.getElementById("menu-links")
+
+    function toogleMenu(){
+        menuLinks.classList.toggle('show-menu');
+
+    }
+    window.onscroll = function(){
+        if(window.scrollY > 0){
+            navbar.style.background = '#eefff9';
+        }else{
+            navbar.style.background = 'transparent';
+        }
+    }
+
+</script>
+
+</body>
+</html>

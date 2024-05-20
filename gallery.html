@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="viewport" content="width=device-width, initial-scale=1">
+    <title>V MEDIA</title>
+    <link rel="stylesheet" href="gallery.css">
+<script src="https://kit.fontawesome.com/cbd1996782.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+   
+    </div>
+        <nav>
+            <img src="images/logo.png" alt="" class="logo">
+            <ul id="menu-links">
+                <li><a href="home.html">Home</li></a>
+                <li><a href="services.html">Services</li></a>
+                <li><a href="gallery.html">Gallery</li></a>
+                <li><a href="about.html">About us</li></a>
+            </ul>
+            <a href="get_started.html"><button class="nav-btn">Get started<img src="images/arrow-white.png"></button></a>    
+            <img src="images/menu.png" alt="" class="menu-icon" onclick="toogleMenu()">
+        </nav>
+        <div class="header">
+            <div class="header-content"></div>      
+            <div class="btn-container">
+        </div> 
+</head>
+<body>
+    <div class="container">
+        <h1>Gallery</h1>
+        <div class="row">
+            <div class="col">
+                <div class="feature-img">
+                    <img src="media/pic.png" width="100%">
+                    <img src="media/play.png" class="play-btn"onclick="playVideo('media/video1.mp4')" >
+                </div>
+            </div>
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="media/pic2.png">
+                        <img src="media/play.png" class="play-btn"onclick="playVideo('media/video2.mp4')" >
+                    </div>
+                    <p>Make your videos unique with the latest VFX and 3D Animation effects.
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="media/pic3.png">
+                        <img src="media/play.png" class="play-btn" onclick="playVideo('media/video3.mp4')">
+                    </div>
+                    <p>Professional video editing and Motion Graphics using the latest technology. Making use of Adobe After Effects, Premiere Pro to Blender and Generative AI.
+            </div>
+            <div class="small-img-row">
+                <div class="small-img">
+                    <img src="media/pic4.png">
+                    <img src="media/play.png" class="play-btn" onclick="playVideo('media/video4.mp4')">
+                </div>
+                <p>Bring anything to life. Created by a Professional Visual Artist.
+        </div> 
+        <div class="video-player" id="videoPlayer">
+            <video width="100%" controls autoplay id="myVideo">
+                <source src="media/video1.mp4" type="video/mp4">
+            </video>
+            <img src="media/close.png" class="close-btn" onclick="stopVideo()">
+        </div>
+      
+<script>
+    var videoPlayer = document.getElementById("videoPlayer")
+    var myVideo = document.getElementById("myVideo")
+
+    function stopVideo(){
+
+        videoPlayer.style.display = "none";
+
+    }
+    function playVideo(file){
+        myVideo.src = file;
+        videoPlayer.style.display = "block";
+    }
+</script>
+
+    <script>
+        let navbar = document.querySelector('nav');
+        let menuLinks = document.getElementById("menu-links")
+    
+        function toogleMenu(){
+            menuLinks.classList.toggle('show-menu');
+    
+        }
+        window.onscroll = function(){
+            if(window.scrollY > 0){
+                navbar.style.background = '#eeff9';
+            }else{
+                navbar.style.background = 'transparent';
+            }
+        }
+       
+    </script>
+    
+    </body>
+    </html> 
